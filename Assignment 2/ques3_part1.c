@@ -3,9 +3,9 @@
 int main(int argc, char **argv) {
     DIR *dp;
     struct dirent *link;
-    dp = opendir(argv[1]);
+    dp = opendir("Assesment 2");
     printf("\n contents of the directory %s are \n", argv[1]);
-    while ((link = readdir(dp)) != 0) printf("%s", link->d_name);
-    closedir(dp);
+    // while ((link = readdir(dp)) != 0) printf("%s", link->d_name;
+    // closedir(dp);
     return 0;
 }
