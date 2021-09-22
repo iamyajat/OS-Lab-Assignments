@@ -4,7 +4,8 @@
 #include <unistd.h>
 
 int main() {
+    printf("Start sleep for 5secs...\n");
     sleep(10);
-    printf("Process is out of sleep after 10 seconds");
+    printf("Process is out of sleep after 5secs.\n");
     return 0;
 }

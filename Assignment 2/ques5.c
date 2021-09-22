@@ -4,10 +4,9 @@
 int main() {
     FILE* pfile;
     int b;
-    pfile = fopen("check.txt", "r");
-    printf("Current content of the file:\n Text written in check.txt\n");
-    printf("After removing spaces:\n");
-    // printf("Textwrittenincheck.txt");
+    pfile = fopen("q5.txt", "r");
+    printf("Current content of the file:\n Made by Yajat Malhotra\n");
+    printf("After removing all of the spaces:\n");
     if (pfile) {
         do {
             b = fgetc(pfile);

@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+
 int main() {
-    int pid, pid1, pid2;
+    int pid;
     pid = fork();
-    if (pid == 1) {
-        printf("Error");
-        exit(1);
+    switch (pid) {
+        case -1:
+            printf("pid = -1\n");
+            exit(1);
+        case 0:
+            printf("CHILD PID: %d\n", getpid());
+        default:
+            printf("PARENT PID: %d\n", getpid());
     }
-    if (pid != 0) {
-        pid1 = getpid();
-        printf("\n The process ID is: %d", pid1);
-    } else {
-        pid2 = getpid();
-        printf("\n The child process ID is %d", pid2);
-    }
+    exit(0);
     return 0;
 }

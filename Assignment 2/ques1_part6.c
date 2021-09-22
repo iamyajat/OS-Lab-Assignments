@@ -4,12 +4,12 @@
 struct dirent *dptr;
 
 int main(int argc, char *argv[]) {
-    char buff[100];
+    char buffer[150];
     DIR *dirp;
-    printf("Enter the directory name");
-    scanf("%s", buff);
-    if ((dirp = opendir(buff)) == NULL) {
-        printf("The given directory does not exist");
+    printf("Enter the name of the directory: ");
+    scanf("%s", buffer);
+    if ((dirp = opendir(buffer)) == NULL) {
+        printf("The given directory does not exist.");
         exit(1);
     }
     while (dptr == readdir(dirp)) {
