@@ -1,23 +1,18 @@
-#include <sys/wait.h>
-#include <sys/types.h>
-#include <unistd.h>
 #include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
 
-int main()
-{
+int main() {
     int pid = fork();
-    if (pid)
-    {
+    if (pid) {
         int p = 0;
         int status;
-        sleep(60);
+        sleep(10);
         p = wait(&status);
         printf("Pid %d exited...\n", p);
-    }
-    else
-    {
-        for(int i = 0; i < 10; i++)
-        {
+    } else {
+        for (int i = 0; i < 10; i++) {
             printf("Child is sleeping... %d\n";
             sleep(1);
         }
