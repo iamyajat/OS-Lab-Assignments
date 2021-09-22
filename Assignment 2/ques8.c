@@ -16,7 +16,7 @@ int main() {
     write(p[1], msg1, BUFF_SIZE);
     write(p[1], msg2, BUFF_SIZE);
     write(p[1], msg3, BUFF_SIZE);
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < 3; i++) {
         read(p[0], buff, BUFF_SIZE);
         printf("%s\n", buff);
     }

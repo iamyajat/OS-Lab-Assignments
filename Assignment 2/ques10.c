@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-void* isPrimeNumber() {
+void* isPrimeNumber(void * thrdid) {
     int n, c = 0;
     printf("Enter a number: ");
     scanf("%d", &n);
@@ -16,9 +16,9 @@ void* isPrimeNumber() {
     }
 }
 
-int main(int argc, char* argv[]) {
+int main() {
     pthread_t thrd;
-    pthread_create(&thrd, NULL, &isPrimeNumber, NULL);
-    pthread_join(thrd, NULL);
+    pthread_create(&thrd, NULL, &isPrimeNumber, (void*) &thrd);
+    pthread_exit(NULL);
     return 0;
 }

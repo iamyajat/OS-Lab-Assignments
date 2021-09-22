@@ -13,7 +13,7 @@ int main() {
         printf("Pid %d exited...\n", p);
     } else {
         for (int i = 0; i < 10; i++) {
-            printf("Child is sleeping... %d\n";
+            printf("Child is sleeping... %d\n", i);
             sleep(1);
         }
         printf("Child exited...");
