@@ -11,9 +11,9 @@ int main() {
     while (1) {
         printf("Enter 'q' to kill process...\n");
         char c = getchar();
-        sleep(10);
+        // sleep(10);
         if (c == 'q') {
-            printf("You killed the background process");
+            printf("You killed the background process\n");
             exit(1);
         }
 

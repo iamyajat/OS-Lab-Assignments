@@ -20,10 +20,11 @@ int main(int argc, char *argv[]) {
     }
     while (fgets(fline, max, fp) != NULL) {
         count++;
-        if (newline == strchr(fline, "\n")) strcpy(newline, "\0");
+        if (newline == strchr(fline, '\n')) strcpy(newline, "\0");
         if (strstr(fline, argv[2]) != NULL) {
-            printf("%s: %d %s \n", argv[1], count, fline);
+            printf("%d %s \n", count, fline);
             occur++;
         }
     }
+    printf("\nTotal occurrences: %d\n", occur);
 }

@@ -14,6 +14,7 @@ int main() {
             printf("Parent Process [PID: %d]\n", getpid());
             wait(&status);
             printf("Still in Parent Process [PID: %d]\n", getpid());
+            break;
     }
     return 0;
 }

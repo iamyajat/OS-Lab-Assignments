@@ -13,9 +13,9 @@ int main() {
             exit(1);
         case 0:
             printf("CHILD PID: %d\n", getpid());
-            sleep(5);
-            printf("Orphan process ending after 5 seconds.\nNEW PARENT PID: %d\n",
-                   getppid());
+            sleep(10);
+            printf("Orphan process ending after 10 seconds.");
+            break;
         default:
             printf("PARENT PID: %d\n", getpid());
             printf("Exit\n");

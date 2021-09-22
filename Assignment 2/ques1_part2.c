@@ -5,6 +5,6 @@
 int main(int args, char *argv[]) {
     printf("PID [initial process]: %d\n", getpid());
     char *args1[] = {"Yajat", "Malhotra", NULL};
-    execv("./ques1_part3", args1);
+    execv("./q1p3", args1);
     return 0;
 }

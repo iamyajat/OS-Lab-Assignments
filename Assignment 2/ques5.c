@@ -3,16 +3,16 @@
 
 int main() {
     FILE* pfile;
-    int b;
-    pfile = fopen("q5.txt", "r");
-    printf("Current content of the file:\n Made by Yajat Malhotra\n");
+    int ch;
+    pfile = fopen("a2.txt", "r");
     printf("After removing all of the spaces:\n");
     if (pfile) {
         do {
-            b = fgetc(pfile);
-            if (!isgraph(b)) putchar(b);
-        } while (b != EOF);
+            ch = fgetc(pfile);
+            if (isgraph(ch)) printf("%c", ch);
+        } while (ch != EOF);
         fclose(pfile);
     }
+    printf("\n");
     return 0;
 }

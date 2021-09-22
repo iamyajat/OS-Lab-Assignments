@@ -5,14 +5,15 @@
 int main() {
     int pid;
     pid = fork();
+    printf("PID %d\n", pid);
     switch (pid) {
         case -1:
-            printf("pid = -1\n");
+            printf("PID: -1\n");
             exit(1);
         case 0:
-            printf("CHILD %d\n", getpid());
+            printf("CHILD PID: %d\n", getpid()); break;
         default:
-            printf("PARENT %d\n", getpid());
+            printf("PARENT PID: %d\n", getpid()); break;
     }
     exit(0);
     return 0;
